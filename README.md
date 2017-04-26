@@ -45,7 +45,7 @@ def index(request):
 and add the following code in channels/urls.py
 
 ```
-from django.conf.urls import urls
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
@@ -68,13 +68,14 @@ urlpatterns = [
 ```
 
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
 	url(r'^channels/', include('channels.urls')),
     url(r'^admin/', admin.site.urls),
 ]
+
 
 ```
 
